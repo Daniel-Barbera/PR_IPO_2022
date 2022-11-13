@@ -14,7 +14,7 @@ const Nav = styled.div`
   justify-content: flex-start;
   align-items: center;
 `;
-const NavIcon = styled.button`
+const ToggleButton = styled.button`
   outline: none;
   border: none;
   background: none; 
@@ -54,15 +54,15 @@ export default function Sidebar() {
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav>
-          <NavIcon>
+          <ToggleButton>
             <FaIcons.FaBars onClick={toggleSidebar}/>
-          </NavIcon>
+          </ToggleButton>
         </Nav>
         <SidebarNav sidebar={ sidebar }>
           <SidebarWrap>
-            <NavIcon>
+            <ToggleButton>
               <AiIcons.AiOutlineClose onClick={toggleSidebar}/>
-            </NavIcon>
+            </ToggleButton>
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} toggleSidebar={toggleSidebar}/>;
             })}
