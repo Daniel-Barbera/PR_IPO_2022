@@ -38,13 +38,13 @@ const DropdownLink = styled(Link)`
   }
 `;
 
-export default function SubMenu({ item }) {
+export default function SubMenu({ item, toggleSidebar }) {
   const [subnav, setSubnav] = useState(false);
   const showSubnav = () => setSubnav(!subnav);
 
   return (
     <>
-      <SidebarLink href={item.path} onClick={item.subNav && showSubnav}>
+      <SidebarLink href={item.path} onClick={item.subNav ? showSubnav : toggleSidebar }>
         <div>
           {item.icon}
           <SidebarLabel>{item.title}</SidebarLabel>
@@ -60,7 +60,7 @@ export default function SubMenu({ item }) {
       {subnav &&
         item.subNav.map((item, index) => {
           return (
-            <DropdownLink href={item.path} key={index}>
+            <DropdownLink href={item.path} key={index} onClick={toggleSidebar}>
               {item.icon}
               <SidebarLabel>{item.title}</SidebarLabel>
             </DropdownLink>

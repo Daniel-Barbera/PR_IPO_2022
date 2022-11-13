@@ -24,6 +24,11 @@ const NavIcon = styled.button`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  &:hover {
+    background: #252831;
+    border-left: 4px solid #632ce4;
+    cursor: pointer;
+  }
 `;
 const SidebarNav = styled.nav`
   background: #15171c;
@@ -43,23 +48,23 @@ const SidebarWrap = styled.div`
 
 export default function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
-  const showSidebar = () => setSidebar(!sidebar);
+  const toggleSidebar = () => setSidebar(!sidebar);
   
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav>
           <NavIcon>
-            <FaIcons.FaBars onClick={showSidebar} />
+            <FaIcons.FaBars onClick={toggleSidebar}/>
           </NavIcon>
         </Nav>
         <SidebarNav sidebar={ sidebar }>
           <SidebarWrap>
             <NavIcon>
-              <AiIcons.AiOutlineClose onClick={showSidebar} />
+              <AiIcons.AiOutlineClose onClick={toggleSidebar}/>
             </NavIcon>
             {SidebarData.map((item, index) => {
-              return <SubMenu item={item} key={index} />;
+              return <SubMenu item={item} key={index} toggleSidebar={toggleSidebar}/>;
             })}
           </SidebarWrap>
         </SidebarNav>
