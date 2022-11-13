@@ -13,7 +13,7 @@ export const SidebarData = [
   },
   {
     title: 'Juegos',
-    path: '/games',
+    path: '/games/',
     icon: <FaIcons.FaGamepad/>,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,

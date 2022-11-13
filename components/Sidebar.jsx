@@ -1,7 +1,6 @@
-'use client';
+"use client"; 
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SidebarData';
@@ -15,7 +14,10 @@ const Nav = styled.div`
   justify-content: flex-start;
   align-items: center;
 `;
-const NavIcon = styled(Link)`
+const NavIcon = styled.button`
+  outline: none;
+  border: none;
+  background: none; 
   margin-left: 2rem;
   font-size: 2rem;
   height: 80px;
@@ -42,17 +44,18 @@ const SidebarWrap = styled.div`
 export default function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
+  
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav>
-          <NavIcon href='#'>
+          <NavIcon>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
         </Nav>
-        <SidebarNav sidebar={sidebar}>
+        <SidebarNav sidebar={ sidebar }>
           <SidebarWrap>
-            <NavIcon href='#'>
+            <NavIcon>
               <AiIcons.AiOutlineClose onClick={showSidebar} />
             </NavIcon>
             {SidebarData.map((item, index) => {

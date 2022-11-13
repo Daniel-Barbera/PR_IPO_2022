@@ -1,19 +1,20 @@
 import styles from './page.module.css';
 import Link from 'next/link';
+
 const links = [{
   label: 'Simon',
-  route: '/app/games/simon'
+  route: '/games/simon'
 }, {
   label: 'Math',
-  route: '/app/games/math'
+  route: '/games/math'
 }, {
   label: 'Memory',
-  route: '/app/games/memory'
+  route: '/games/memory'
 }]
 
 export default function Games () {
   return (
-    <div className={styles.page}>
+    <>
       <h1 className={styles.title}>Games</h1>
       <div className={styles.games}>
         {links.map(({ label, route }) => (
@@ -22,6 +23,6 @@ export default function Games () {
           </Link>
         ))}
       </div>
-    </div>
+    </>
   )
 }
