@@ -1,7 +1,8 @@
+import React from "react";
 import { Provider } from "react-redux";
-import "./src/index.css";
-import Board from "./src/screens/Board";
-import store from "./src/store";
+import "./index.css";
+import Board from "./screens/Board";
+import store from "./store";
 
 export default function Simon() {
   return (
