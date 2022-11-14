@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { routerReducer as routing } from 'react-router-redux';
+import { routerReducer as routing } from 'connected-next-router';
 
 import pads from './pads';
 import game from './game';

@@ -1,3 +1,4 @@
+'use client'; 
 import React from "react";
 import { Flex } from "reflexbox";
 
@@ -7,9 +8,9 @@ import { ButtonLink } from "../components/Buttons";
 
 const Welcome = () => (
   <Shell>
-    <Title value="REACT SIMON" />
+    <Title value="SIMÓN DICE" />
     <Flex justify="center">
-      <ButtonLink to="/board">Play</ButtonLink>
+      <ButtonLink href="games/simon/board">Jugar</ButtonLink>
     </Flex>
   </Shell>
 );

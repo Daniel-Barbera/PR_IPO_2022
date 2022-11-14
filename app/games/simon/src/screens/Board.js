@@ -1,3 +1,4 @@
+'use client';
 import React, { useCallback, useEffect } from "react";
 import { connect, shallowEqual, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -53,9 +54,9 @@ export function Board(props) {
     <Shell>
       {gameOver && (
         <CenterOverlay p={2}>
-          <h2>SCORE {score}</h2>
-          <h3>HIGH SCORE {highscore}</h3>
-          <Button onClick={startMatch}>Try again</Button>
+          <h2>PUNTUACIÓN {score}</h2>
+          <h3>PUNTUACIÓN MÁXIMA {highscore}</h3>
+          <Button onClick={startMatch}>Jugar</Button>
         </CenterOverlay>
       )}
       <GrayScale disabled={!gameOver}>

@@ -1,5 +1,6 @@
+'use client'; 
 import React, { Component } from "react";
-import audios from "../audios";
+import audios from "/public/audios";
 import { connect } from "react-redux";
 
 export class Player extends Component {

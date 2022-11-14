@@ -15,16 +15,6 @@ export class Shell extends Component {
         justify="center"
         style={{ width: "100%", height: "100%", ...style }}
       >
-        <Header p={2} justify="space-between" flex>
-          <Box>
-            HIGH SCORE: {highscore} <br />
-          </Box>
-          <Box>
-            <a href={REPO_URL} target="_blank">
-              <GoOctoface size={40} color={"white"} />
-            </a>
-          </Box>
-        </Header>
         <Box
           display="flex"
           justifyContent="center"
