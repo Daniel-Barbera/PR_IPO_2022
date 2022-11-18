@@ -8,8 +8,8 @@ export class Shell extends Component {
     const { highscore, style, children } = this.props;
     return (
       <Flex
-        align="center"
-        justify="center"
+        align= "center"
+        justify= "center"
         style={{ ...style, width: "100%", height: "100%" }}
       >
         <Header p={2} justify="center" flex>
