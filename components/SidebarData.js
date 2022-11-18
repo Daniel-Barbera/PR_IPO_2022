@@ -37,12 +37,12 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'About',
+    title: 'Sobre nosotros',
     path: '/about',
     icon: <FaIcons.FaInfoCircle />,
   },
   {
-    title: 'Contact',
+    title: 'Contacto',
     path: '/contact',
     icon: <IoIcons.IoMdContact />,
   }

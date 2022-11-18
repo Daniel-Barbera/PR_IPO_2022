@@ -9,7 +9,7 @@ export default function Simon() {
   <>
     <Provider store={store}>
       <Welcome/>
-    </Provider>,
+    </Provider>
   </>
   );
 }

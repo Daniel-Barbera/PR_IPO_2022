@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { Flex, Box } from "reflexbox";
-
-import { GoOctoface } from "react-icons/go";
-import { REPO_URL } from "../constants";
 import Header from "../components/Header";
 import { connect } from "react-redux";
 
@@ -13,8 +10,13 @@ export class Shell extends Component {
       <Flex
         align="center"
         justify="center"
-        style={{ width: "100%", height: "100%", ...style }}
+        style={{ ...style, width: "100%", height: "100%" }}
       >
+        <Header p={2} justify="center" flex>
+          <Box>
+            MÁXIMO: {highscore} <br />
+          </Box>
+        </Header>
         <Box
           display="flex"
           justifyContent="center"
