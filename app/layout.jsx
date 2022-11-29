@@ -10,8 +10,14 @@ export default function RootLayout ({ children }) {
       */}
       <head />
       <body>
-        <Sidebar />
-        {children}
+        <div style={{display: 'flex', flexDirection: 'column'}}>
+          <div style={{height: '80px'}}>
+            <Sidebar />
+          </div>
+          <div style={{ flex: 1, position: 'relative'}}>
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   )
